@@ -5,7 +5,7 @@ namespace Jail.Common.Models;
 /// <summary>
 /// Представляет класс наименования команды.
 /// </summary>
-public class CssCommandName
+public class CssCommand
 {
 	#region Properties
 	/// <summary>
@@ -50,16 +50,16 @@ public class CssCommandName
 
 	#region .ctor
 	/// <summary>
-	/// Инициализирует экземпляр <see cref="CssCommandName"/>.
+	/// Инициализирует экземпляр <see cref="CssCommand"/>.
 	/// </summary>
 	/// <param name="value"></param>
-	public CssCommandName(string value)
+	public CssCommand(string value)
 	{
 		Value = value;
 		Args = new();
 	}
 
-	public CssCommandName(string value, params string[] args)
+	public CssCommand(string value, params string[] args)
 	{
 		Value = value;
 		Args = new(args);
@@ -71,7 +71,7 @@ public class CssCommandName
 	/// Добавляет аргументы.
 	/// </summary>
 	/// <param name="args">Аргументы.</param>
-	public CssCommandName AddArgs(params string[] args)
+	public CssCommand AddArgs(params string[] args)
 	{
 		foreach (var arg in args)
 		{

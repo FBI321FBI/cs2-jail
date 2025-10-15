@@ -9,11 +9,11 @@ namespace Jail.Common.Extensions;
 public static class CCSPlayerControllerExtensions
 {
 	/// <summary>
-	/// Выполняет <see cref="CssCommandName"/> в формате say.
+	/// Выполняет <see cref="CssCommand"/> в формате say.
 	/// </summary>
 	/// <param name="controller"><see cref="CCSPlayerController"/>.</param>
-	/// <param name="command"><see cref="CssCommandName"/>.</param>
-	public static void ExecuteClientCommandFromServer(this CCSPlayerController player, CssCommandName command)
+	/// <param name="command"><see cref="CssCommand"/>.</param>
+	public static void ExecuteClientCommandFromServer(this CCSPlayerController player, CssCommand command)
 	{
 		player.ExecuteClientCommandFromServer(command.SayCommand);
 	}
